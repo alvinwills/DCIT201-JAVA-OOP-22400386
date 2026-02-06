@@ -33,4 +33,14 @@ public class Question1{
                 System.out.println("Unknown grade.");
         }
     }
+    public static void executeGradeReport(double score) {
+        if (!validateScore(score)) {
+            System.out.println("Invalid Score");
+            return;
+        }
+        char grade = calculateLetterGrade(score);
+        displayPerformanceMessage(grade);
+    }
+
+
 }
